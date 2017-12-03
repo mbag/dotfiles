@@ -10,6 +10,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+SSH_ENV="${HOME}/.ssh/environment"
+
 function start_agent {
 	echo "Initialising new SSH agent..."
 	/usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
